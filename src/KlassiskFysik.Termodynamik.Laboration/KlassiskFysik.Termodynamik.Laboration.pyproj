@@ -23,16 +23,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="requirements.txt" />
-    <Compile Include="Calculator.py" />
-    <Compile Include="CapacityCalculator.py" />
+    <Compile Include="Calculators\Calculator.py" />
+    <Compile Include="Calculators\CapacityCalculator.py" />
     <Compile Include="KlassiskFysik.Termodynamik.Laboration.py" />
     <Compile Include="Settings.py" />
-    <Compile Include="TemperatureCalculator.py" />
+    <Compile Include="Calculators\TemperatureCalculator.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="cooling_full.csv" />
-    <Content Include="experiment_settings.csv" />
-    <Content Include="heating_full.csv" />
+    <Content Include="Lab1\cooling_full.csv" />
+    <Content Include="Lab1\experiment_settings.csv" />
+    <Content Include="Lab1\cooling_resistor.csv" />
+    <Content Include="Lab1\heating_resistor.csv" />
+    <Content Include="Lab1\heating_full.csv" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -44,6 +46,10 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Lab1\" />
+    <Folder Include="Calculators\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
